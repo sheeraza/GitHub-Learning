@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+       <script language="javascript">
+       var attempt=3;
+	   
+	   function login()
+       
+       {
+		  var uname = document.getElementById("username").value;
+		    var upass = document.getElementById("password").value;
+		   
+		   if(uname=="admin" && upass=="admin")
+		   
+		   {
+			   
+			alert("welcome to admin");
+			window.location = "welcome.html";   
+			   
+			   
+			   }
+		   
+		   else{
+			   
+			   attempt--;
+			   
+			 alert("you have left"+attempt+"attempt");  
+			   
+			  if(attempt==0)
+			  
+			  {
+				  document.getElementById("username").disabled = true;
+
+document.getElementById("password").disabled = true;
+document.getElementById("login").disabled = true;
+				  
+				  
+				  
+				  }
+			   
+			   
+			   }
+		   
+		   
+		   
+		   
+		   
+		   
+		   }
+       
+       
+       
+       </script>
+
+
+
+
+</head>
+
+<body>
+
+     User Name : <input type="username" id="username" ><br/><br/> 
+     Password : <input type="password" id="password"><br/><br/>  
+        <input type="button" value="login" id="login" onClick="login()">
+          
+
+
+</body>
+</html>
